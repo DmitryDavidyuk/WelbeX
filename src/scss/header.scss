@@ -6,7 +6,7 @@
    @media (max-width: $tablet) {
       padding-top: toRem(31);
       padding-bottom: toRem(20);
-      background-color: #0e1014;
+      background-color: $blackColor;
    }
    // .header__container
    &__container {
