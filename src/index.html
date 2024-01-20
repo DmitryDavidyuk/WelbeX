@@ -5,8 +5,47 @@
       <div class="wrapper">
          @@include('html/_header.htm',{})
          <main class="page">
-            <div class="light"></div>
-            <div class="name__container"></div>
+            <section class="hero">
+               <div data-prlx-mouse data-prlx-cx="15" class="red-light light"></div>
+               <div data-prlx-mouse data-prlx-cx="15" data-prlx-dxr class="purple-light light"></div>
+               <div data-prlx-mouse data-prlx-cx="15" class="yellow-light light"></div>
+               <div data-prlx-mouse data-prlx-cx="15" class="purple-boll"><img src="@img/decor/purple ball.svg" alt="boll" /></div>
+               <div data-prlx-mouse data-prlx-cx="15" data-prlx-dxr class="red-boll"><img src="@img/decor/red ball.svg" alt="boll" /></div>
+               <div data-prlx-mouse data-prlx-cx="15" class="red-boll_2"><img src="@img/decor/red ball.svg" alt="boll" /></div>
+
+               <div class="hero__container">
+                  <div class="hero__opacity"></div>
+                  <div class="hero__info">
+                     <div class="hero__title">
+                        <h1>Заробляйте більше <span>з AmoCRM.</span></h1>
+                     </div>
+                     <div class="hero__text"><p>Розвиваємо та контролюємо продажі за вас</p></div>
+                  </div>
+                  <div class="hero__image"><img src="@img/hero/Lights-Group.png" alt="Lights" /></div>
+                  <div class="hero__present present">
+                     <h2 class="present__title"><span>Разом з</span> безкоштовною консультацією <span>ми даруємо:</span></h2>
+                     <ul class="present__list list-present">
+                        <li class="list-present__item">
+                           <div class="list-present__title">Віджети</div>
+                           <div class="list-present__text">30 готових рішень</div>
+                        </li>
+                        <li class="list-present__item">
+                           <div class="list-present__title">Dashboard</div>
+                           <div class="list-present__text">з показниками вашого бізнесу</div>
+                        </li>
+                        <li class="list-present__item">
+                           <div class="list-present__title">Skype Аудит</div>
+                           <div class="list-present__text">відділу продажів і CRM системи</div>
+                        </li>
+                        <li class="list-present__item">
+                           <div class="list-present__title">35 днів</div>
+                           <div class="list-present__text">використання AmoCRM</div>
+                        </li>
+                     </ul>
+                     <button type="submit" class="button">Отримати консультацію</button>
+                  </div>
+               </div>
+            </section>
          </main>
          @@include('html/_footer.htm',{})
       </div>

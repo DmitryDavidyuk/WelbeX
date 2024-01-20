@@ -1,11 +1,187 @@
 //====================================================================================================
+.page {
+   position: relative;
+}
 .light {
-   width: 311px;
-   height: 311px;
+   position: absolute;
    flex-shrink: 0;
-   border-radius: 311px;
    opacity: 0.5;
-   background: #961a1a;
    filter: blur(196px);
 }
+.red-light {
+   top: toRem(252);
+   left: toRem(-97);
+   width: 311px;
+   height: 311px;
+   border-radius: 311px;
+   background: #961a1a;
+}
+
+.purple-light {
+   top: toRem(-200);
+   left: toRem(600);
+   width: 259px;
+   height: 259px;
+   border-radius: 259px;
+   background: #833ab4;
+}
+.yellow-light {
+   top: toRem(425);
+   left: toRem(595);
+   width: 280px;
+   height: 280px;
+   border-radius: 280px;
+   background: #fcb045;
+}
+
+.purple-boll {
+   position: absolute;
+   top: 0;
+   right: 35%;
+   img {
+      width: toRem(60);
+      height: toRem(60);
+   }
+}
+.red-boll {
+   position: absolute;
+   top: toRem(84);
+   left: 35%;
+   z-index: -1;
+   img {
+      width: toRem(83);
+      height: toRem(83);
+   }
+}
+.red-boll_2 {
+   position: absolute;
+   bottom: 0;
+   right: 38%;
+
+   img {
+      width: toRem(28);
+      height: toRem(28);
+   }
+}
 //====================================================================================================
+
+.hero {
+   @include adaptiveValue("padding-top", 210, 100);
+   position: relative;
+   // .hero__container
+   &__container {
+      display: flex;
+      justify-content: space-between;
+   }
+   // .hero__info
+   &__info {
+      max-width: toRem(362);
+   }
+   // .hero__title
+   &__title {
+      font-family: Inter;
+      font-size: toRem(48);
+      font-weight: 400;
+      &:not(:last-child) {
+         margin-bottom: toRem(30);
+      }
+      span {
+         font-weight: 900;
+         background: linear-gradient(90deg, #fcb045 36.99%, #ff3f78 100%);
+         background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+   }
+   // .hero__text
+   &__text {
+      font-size: toRem(18);
+   }
+   // .hero__image
+   &__image {
+      // transform-style: preserve-3d;
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      transform: translate(-50%);
+      z-index: -2;
+   }
+   // .hero__present
+   &__present {
+   }
+   // hero__opacity
+   &__opacity {
+      top: 0;
+      left: 0;
+      width: 45%;
+      height: toRem(700);
+      position: absolute;
+      z-index: -1;
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+   }
+}
+.present {
+   max-width: toRem(300);
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   // .present__list
+   &__list {
+   }
+   &__title {
+      font-family: Inter;
+      font-size: toRem(18);
+      font-weight: 700;
+      text-align: right;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, rgba(252, 176, 69, 1) 36.99%, rgba(253, 29, 29, 1) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      &:not(:last-child) {
+         margin-bottom: toRem(40);
+      }
+      span {
+         background: $mainColor;
+         background-clip: text;
+         -webkit-background-clip: text;
+         font-weight: 500;
+         text-transform: lowercase;
+      }
+   }
+}
+.list-present {
+   display: grid;
+   gap: toRem(30);
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   &:not(:last-child) {
+      margin-bottom: toRem(61);
+   }
+   // .list-present__item
+   &__item {
+   }
+   // .list-present__title
+   &__title {
+      text-align: right;
+      font-family: Inter;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+      &:not(:last-child) {
+         margin-bottom: toRem(6);
+      }
+   }
+   // .list-present__text
+   &__text {
+      text-align: right;
+   }
+}
+.button {
+   padding: toRem(21) toRem(34);
+   background-color: #4077f3;
+   font-family: Inter;
+   font-weight: 500;
+}
