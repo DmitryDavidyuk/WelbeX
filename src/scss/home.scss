@@ -66,7 +66,7 @@
 //====================================================================================================
 
 .hero {
-   @include adaptiveValue("padding-top", 210, 100);
+   padding-top: 210px;
    position: relative;
    // .hero__container
    &__container {
@@ -226,6 +226,13 @@
    background-color: #4077f3;
    font-family: Inter;
    font-weight: 500;
+   transition: all 0.3s;
+   @media (any-hover: hover) {
+      &:hover {
+         background: #4077f3;
+         box-shadow: 0px 0px 40px 6px rgba(64, 119, 243, 0.3);
+      }
+   }
    &_2 {
       background-color: #396adb;
       @media (min-width: $mobile) {

@@ -84,7 +84,17 @@
          height: toRem(24);
       }
    }
+   transition: all 0.3s;
 }
+@media (max-width: $mobile) {
+   ._header-scroll {
+      margin-top: toRem(-57);
+   }
+   ._header-show {
+      margin-top: 0;
+   }
+}
+
 .menu {
    // .menu__icon
    &__icon {
