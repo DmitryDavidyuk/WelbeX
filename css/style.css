@@ -168,6 +168,8 @@ body {
   width: 100%;
   z-index: 50;
   padding-top: 2.9375rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header__container {
@@ -305,6 +307,7 @@ body {
 }
 
 .hero {
+  padding-top: 210px;
   position: relative;
 }
 
@@ -447,6 +450,8 @@ body {
   background-color: #4077f3;
   font-family: Inter;
   font-weight: 500;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .button_2 {
@@ -477,10 +482,6 @@ body {
        -moz-column-gap: 1.875rem;
             column-gap: 1.875rem;
   }
-
-  .hero {
-    padding-top: 13.125rem;
-  }
 }
 
 @media (max-width: 50em) {
@@ -498,10 +499,6 @@ body {
     -webkit-column-gap: 0.625rem;
        -moz-column-gap: 0.625rem;
             column-gap: 0.625rem;
-  }
-
-  .hero {
-    padding-top: 6.25rem;
   }
 }
 
@@ -583,6 +580,14 @@ body {
   .header__social-icon {
     width: 1.5rem;
     height: 1.5rem;
+  }
+
+  ._header-scroll {
+    margin-top: -3.5625rem;
+  }
+
+  ._header-show {
+    margin-top: 0;
   }
 
   .hero__container {
@@ -682,18 +687,6 @@ body {
               column-gap: calc(0.625rem + 1.25 * (100vw - 20rem) / 53.125);
     }
 }
-
-@supports (padding-top: clamp( 6.25rem , 3.6617647059rem  +  12.9411764706vw , 13.125rem )) {
-    .hero {
-      padding-top: clamp( 6.25rem , 3.6617647059rem  +  12.9411764706vw , 13.125rem );
-    }
-}
-
-@supports not (padding-top: clamp( 6.25rem , 3.6617647059rem  +  12.9411764706vw , 13.125rem )) {
-    .hero {
-      padding-top: calc(6.25rem + 6.875 * (100vw - 20rem) / 53.125);
-    }
-}
 }
 
 @media (any-hover: hover) {
@@ -709,5 +702,11 @@ body {
   .menu__link:hover {
     color: #4077f3;
     font-size: 1.0625rem;
+  }
+
+  .button:hover {
+    background: #4077f3;
+    -webkit-box-shadow: 0px 0px 40px 6px rgba(64, 119, 243, 0.3);
+            box-shadow: 0px 0px 40px 6px rgba(64, 119, 243, 0.3);
   }
 }
