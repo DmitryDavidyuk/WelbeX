@@ -1,0 +1,47 @@
+<svg width="54.000000" height="54.000000" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_551_4469_dd" x="0.000000" y="0.000000" width="54.000000" height="54.000000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feGaussianBlur in="BackgroundImage" stdDeviation="1.66667"/>
+			<feComposite in2="SourceAlpha" operator="in" result="effect_backgroundBlur_1"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="4"/>
+			<feGaussianBlur stdDeviation="1.33333"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+			<feBlend mode="normal" in2="effect_backgroundBlur_1" result="effect_dropShadow_2"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_2" result="shape"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="-4" dy="4"/>
+			<feGaussianBlur stdDeviation="2.33333"/>
+			<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+			<feBlend mode="normal" in2="shape" result="effect_innerShadow_3"/>
+		</filter>
+		<radialGradient id="paint_radial_551_4469_0" cx="0.000000" cy="0.000000" r="1.000000" gradientUnits="userSpaceOnUse" gradientTransform="translate(6.29425e-05 5.49991) rotate(36.6343) scale(48.6004 48.6004)">
+			<stop stop-color="#FFE9CB" stop-opacity="0.709804"/>
+			<stop offset="1.000000" stop-color="#B88312" stop-opacity="0.560784"/>
+		</radialGradient>
+		<linearGradient id="paint_linear_551_4469_1" x1="0.000011" y1="-9.500000" x2="43.000008" y2="46.000008" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FCB045"/>
+			<stop offset="0.395949" stop-color="#FCB045" stop-opacity="0.031373"/>
+			<stop offset="0.744924" stop-color="#FCB045" stop-opacity="0.000000"/>
+			<stop offset="1.000000" stop-color="#FCB045" stop-opacity="0.000000"/>
+		</linearGradient>
+		<pattern id="pattern_551_44700" patternContentUnits="objectBoundingBox" width="1.000000" height="1.000000">
+			<use xlink:href="#image551_4470_0" transform="scale(0.021739 0.021739)"/>
+		</pattern>
+		<image id="image551_4470_0" width="46.000000" height="46.000000" xlink:href="data:image/png;base64,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"/>
+	</defs>
+	<rect id="yellow ball" width="46.000000" height="46.000000" transform="translate(50.000000 0.000000) rotate(90.000000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g filter="url(#filter_551_4469_dd)">
+		<circle id="Ellipse 121" r="23.000000" transform="matrix(4.37114e-08 -4.37114e-08 1 1 27 23)" fill="url(#paint_radial_551_4469_0)" fill-opacity="0.800000"/>
+	</g>
+	<circle id="Ellipse 121" r="22.750000" transform="matrix(4.37114e-08 -4.37114e-08 1 1 27 23)" stroke="url(#paint_linear_551_4469_1)" stroke-opacity="1.000000" stroke-width="0.500000"/>
+	<g opacity="0.050000">
+		<rect id="Rectangle" x="50.000000" rx="23.000000" width="46.000000" height="46.000000" transform="rotate(90 50.000000 0.000000)" fill="url(#pattern_551_44700)" fill-opacity="1.000000"/>
+	</g>
+</svg>
