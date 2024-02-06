@@ -71,7 +71,7 @@
    position: absolute;
    bottom: 0;
    right: 38%;
-
+   z-index: -1;
    img {
       width: toRem(28);
       height: toRem(28);
@@ -82,6 +82,7 @@
 .hero {
    padding-top: 210px;
    position: relative;
+
    // .hero__container
    &__container {
       display: flex;
@@ -152,6 +153,7 @@
       display: flex;
    }
 }
+
 .present {
    max-width: toRem(300);
    display: flex;
@@ -366,4 +368,78 @@
          min-width: toRem(156);
       }
    }
+}
+
+//========================================================================================================================================================
+.about {
+   @include adaptiveValue("padding-top", 150, 80);
+   // .about__container
+   &__container {
+   }
+   // .about__title
+   &__title {
+      font-family: inter;
+      @include adaptiveValue("font-size", 48, 36);
+      line-height: 120.833333%; /* 58/48 */
+
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 70, 40);
+      }
+   }
+   // .about__subtitle
+   &__subtitle {
+      font-family: inter;
+      @include adaptiveValue("font-size", 24, 18);
+      line-height: 120.833333%; /* 29/24 */
+      font-weight: 700;
+      background: linear-gradient(90deg, #fcb045 36.99%, #fd1d1d 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-box-decoration-break: clone;
+
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 70, 40);
+      }
+      max-width: toRem(390);
+   }
+   // .about__list
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap-reverse;
+      column-gap: toRem(10);
+      row-gap: toRem(5);
+      max-width: toRem(977);
+   }
+   // .about__item
+   &__item {
+      @include adaptiveValue("font-size", 18, 14);
+      line-height: 122.222222%; /* 22/18 */
+      display: flex;
+      flex-direction: column;
+
+      max-width: toRem(227);
+      span {
+         font-family: inter;
+         @include adaptiveValue("font-size", 48, 36);
+         font-weight: 700;
+         line-height: 120.833333%; /* 58/48 */
+      }
+   }
+}
+.decor-g {
+   font-weight: 700;
+   background: linear-gradient(123.06deg, rgb(252, 176, 69), rgb(255, 63, 120));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   text-transform: uppercase;
+}
+
+.decor-w {
+   background: $mainColor;
+   background-clip: text;
+   -webkit-background-clip: text;
+   font-weight: 400;
 }
