@@ -14,66 +14,6 @@
             document.documentElement.classList.add(className);
         }));
     }
-    function functions_FLS(message) {
-        setTimeout((() => {
-            if (window.FLS) console.log(message);
-        }), 0);
-    }
-    class MousePRLX {
-        constructor(props, data = null) {
-            let defaultConfig = {
-                init: true,
-                logging: true
-            };
-            this.config = Object.assign(defaultConfig, props);
-            if (this.config.init) {
-                const paralaxMouse = document.querySelectorAll("[data-prlx-mouse]");
-                if (paralaxMouse.length) {
-                    this.paralaxMouseInit(paralaxMouse);
-                    this.setLogging(`Прокинувся, стежу за об'єктами: (${paralaxMouse.length})`);
-                } else this.setLogging("Немає жодного обєкта. Сплю...");
-            }
-        }
-        paralaxMouseInit(paralaxMouse) {
-            paralaxMouse.forEach((el => {
-                const paralaxMouseWrapper = el.closest("[data-prlx-mouse-wrapper]");
-                const paramСoefficientX = el.dataset.prlxCx ? +el.dataset.prlxCx : 100;
-                const paramСoefficientY = el.dataset.prlxCy ? +el.dataset.prlxCy : 100;
-                const directionX = el.hasAttribute("data-prlx-dxr") ? -1 : 1;
-                const directionY = el.hasAttribute("data-prlx-dyr") ? -1 : 1;
-                const paramAnimation = el.dataset.prlxA ? +el.dataset.prlxA : 50;
-                let positionX = 0, positionY = 0;
-                let coordXprocent = 0, coordYprocent = 0;
-                setMouseParallaxStyle();
-                if (paralaxMouseWrapper) mouseMoveParalax(paralaxMouseWrapper); else mouseMoveParalax();
-                function setMouseParallaxStyle() {
-                    const distX = coordXprocent - positionX;
-                    const distY = coordYprocent - positionY;
-                    positionX += distX * paramAnimation / 1e3;
-                    positionY += distY * paramAnimation / 1e3;
-                    el.style.cssText = `transform: translate3D(${directionX * positionX / (paramСoefficientX / 10)}%,${directionY * positionY / (paramСoefficientY / 10)}%,0) rotate(0.02deg);`;
-                    requestAnimationFrame(setMouseParallaxStyle);
-                }
-                function mouseMoveParalax(wrapper = window) {
-                    wrapper.addEventListener("mousemove", (function(e) {
-                        const offsetTop = el.getBoundingClientRect().top + window.scrollY;
-                        if (offsetTop >= window.scrollY || offsetTop + el.offsetHeight >= window.scrollY) {
-                            const parallaxWidth = window.innerWidth;
-                            const parallaxHeight = window.innerHeight;
-                            const coordX = e.clientX - parallaxWidth / 2;
-                            const coordY = e.clientY - parallaxHeight / 2;
-                            coordXprocent = coordX / parallaxWidth * 100;
-                            coordYprocent = coordY / parallaxHeight * 100;
-                        }
-                    }));
-                }
-            }));
-        }
-        setLogging(message) {
-            this.config.logging ? functions_FLS(`[PRLX Mouse]: ${message}`) : null;
-        }
-    }
-    modules_flsModules.mousePrlx = new MousePRLX({});
     class Parallax {
         constructor(elements) {
             if (elements.length) this.elements = Array.from(elements).map((el => new Parallax.Each(el, this.options)));
@@ -179,6 +119,22 @@
             }));
         }
     }), 0);
+    const btnDisable = document.querySelector(".btn2js");
+    const btnEnable = document.querySelector(".btn1js");
+    const block1 = document.querySelector(".content-problems__block-1");
+    const block2 = document.querySelector(".content-problems__block-2");
+    btnDisable.addEventListener("click", (() => {
+        btnDisable.classList.remove("buttons-mob-disable");
+        btnEnable.classList.add("buttons-mob-disable");
+        block1.style = "display: none";
+        block2.style = "display: flex";
+    }));
+    btnEnable.addEventListener("click", (() => {
+        btnEnable.classList.remove("buttons-mob-disable");
+        btnDisable.classList.add("buttons-mob-disable");
+        block1.style = "display: flex";
+        block2.style = "display: none";
+    }));
     window["FLS"] = true;
     isWebp();
     headerScroll();
