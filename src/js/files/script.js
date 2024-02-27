@@ -26,3 +26,23 @@ import { flsModules } from "./modules.js";
 // 		element.style.transform = "rotateX(0) rotateY(0)";
 // 	});
 // });
+
+
+const btnDisable = document.querySelector('.btn2js');
+const btnEnable = document.querySelector('.btn1js');
+const block1 = document.querySelector('.content-problems__block-1');
+const block2 = document.querySelector('.content-problems__block-2');
+
+
+btnDisable.addEventListener('click', () => {
+	btnDisable.classList.remove('buttons-mob-disable');
+	btnEnable.classList.add('buttons-mob-disable');
+	block1.style = 'display: none';
+	block2.style = 'display: flex';
+})
+btnEnable.addEventListener('click', () => {
+	btnEnable.classList.remove('buttons-mob-disable');
+	btnDisable.classList.add('buttons-mob-disable');
+	block1.style = 'display: flex';
+	block2.style = 'display: none';
+})
